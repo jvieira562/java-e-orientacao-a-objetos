@@ -9,14 +9,14 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
-	
+public class TesteOrdenacao {
+
 	public static void main(String[] args) {
 
 		Conta cc1 = new ContaCorrente(22, 33);
 		Cliente clienteCC1 = new Cliente();
 		clienteCC1.setNome("José");
-		cc1.setTitular(clienteCC1);
+		cc1.setTitular(clienteCC1); 
 		cc1.deposita(333.0);
 
 		Conta cc2 = new ContaPoupanca(22, 44);
@@ -38,17 +38,13 @@ public class Teste {
 		cc4.deposita(222.0);
 
 		List<Conta> lista = new ArrayList<>();
-		
+
 		lista.add(cc1);
 		lista.add(cc2);
 		lista.add(cc3);
 		lista.add(cc4);
 
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-		NumeroDaContaCompatator nomeComparator = new NumeroDaContaCompatator();
-		SaldoDaContaComparator saldoComparator = new SaldoDaContaComparator();
-
-		lista.sort(nomeComparator);
+		lista.sort(new NumeroDaContaCompatator());
 
 		System.out.println("\n - Contas ordenadas em ordem crescente, de acordo com o numero da conta. \n");
 
@@ -57,8 +53,8 @@ public class Teste {
 			System.out.println(" - Nome do titular: " + conta.getTitular().getNome() + "\n - Número da conta: " + conta
 					+ "\n ----------------------------------------------");
 		}
-		
-		lista.sort(titularComparator);
+
+		lista.sort(new TitularDaContaComparator());
 
 		System.out.println("\n - Contas ordenadas por ordem alfabetica de acordo com nome do titular. \n");
 
@@ -68,7 +64,7 @@ public class Teste {
 					+ "\n ----------------------------------------------");
 		}
 
-		lista.sort(saldoComparator);
+		lista.sort(new SaldoDaContaComparator());
 
 		System.out.println("\n - Contas ordenadas em ordem decrescente de acordo com o saldo do titular. \n");
 
@@ -79,8 +75,6 @@ public class Teste {
 		}
 
 	}
-	
-
 
 }
 
@@ -102,17 +96,8 @@ class NumeroDaContaCompatator implements Comparator<Conta> {
 	@Override
 	public int compare(Conta c1, Conta c2) {
 
-		if (c1.getNumero() < c2.getNumero()) {
+		return Integer.compare(c1.getNumero(), c2.getNumero());
 
-			return -1;
-		}
-
-		if (c1.getNumero() > c2.getNumero()) {
-
-			return 1;
-		}
-
-		return 0;
 	}
 
 }
