@@ -62,12 +62,6 @@ public class TesteLambda {
 
 		lista.forEach( (conta) -> System.out.println(" - Nome do titular: " + conta.getTitular().getNome() + "\n - Número da conta: " + conta + "\n ----------------------"));
 
-//		for (Conta conta : lista) {
-//
-//			System.out.println(" - Nome do titular: " + conta.getTitular().getNome() + "\n - Número da conta: " + conta
-//					+ "\n ----------------------------------------------");
-//		}
-
 	}
 
 }
