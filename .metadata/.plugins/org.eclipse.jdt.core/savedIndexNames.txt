@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+X:\estudos\programacao\java-estudos\plataformas\alura\java-e-orientacao-a-objetos\.metadata\.plugins\org.eclipse.jdt.core
-2016769120.index
-1206730291.index
