@@ -1,0 +1,5 @@
+Um torrent é um atalho criado para o arquivo que esta no computador de
+outros, por isso quem tem o arquivo no computador precisa semear, somente 
+assim outros poderão baixar o arquivo, e os que estao baixando dependem 
+dos seeders (sementes) para completar um download, a velocidade do dwonload 
+depende de cada torrent e sua quantidade de seeders!

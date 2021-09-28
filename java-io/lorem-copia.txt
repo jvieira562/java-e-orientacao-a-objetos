@@ -1,0 +1,3 @@
+ Idade: 10y;
+ Altura: 1,70m;
+ Peso: 70kg;
