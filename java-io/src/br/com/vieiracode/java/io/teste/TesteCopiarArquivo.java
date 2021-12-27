@@ -23,7 +23,7 @@ public class TesteCopiarArquivo {
 
 		testeCopiarArquivo.setPrimeiroArquivo("lorem-2.txt");
 		testeCopiarArquivo.setSegundoArquivo("lorem-copia.txt");
-
+	
 		/**
 		 * Teclado
 		 */
